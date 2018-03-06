@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gln-P4-tKk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Snap View Controller-->
+        <scene sceneID="IVm-Sm-Q47">
+            <objects>
+                <viewController id="gln-P4-tKk" customClass="SnapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pf0-cH-2kx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Box1" translatesAutoresizingMaskIntoConstraints="NO" id="CHR-gb-dYz">
+                                <rect key="frame" x="52" y="57" width="83" height="98"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="xS3-df-gMF"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UxG-ht-fBT" appends="YES" id="hwC-25-tHS"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="box" destination="CHR-gb-dYz" id="hrX-uD-hEs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcU-yc-rQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UxG-ht-fBT">
+                    <connections>
+                        <action selector="handleSnapGesture:" destination="gln-P4-tKk" id="tJX-FF-4wg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="41.829085457271368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Box1" width="100" height="100"/>
+    </resources>
+</document>
